@@ -201,8 +201,8 @@ resource "null_resource" "configure-cat-app" {
     }
   }
 }
-module "azure-backup" {
-  source  = "app.terraform.io/CAE-terraformcloud/azure-backup/azurerm"
-  version = "1.0.2"
+module "naming" {
+  source  = "Azure/naming/azurerm"
+  version = "0.4.0"
   resource_group_name = "${var.prefix}-public"
 }
