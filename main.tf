@@ -201,8 +201,8 @@ resource "null_resource" "configure-cat-app" {
     }
   }
 }
-module "naming" {
-  source  = "Azure/naming/azurerm"
-  version = "0.4.0"
+module "azure-backup" {
+  source  = "ravensorb/azure-backup/azurerm"
+  version = "1.0.2"
   resource_group_name = "${var.prefix}-public"
 }
